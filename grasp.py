@@ -11,7 +11,7 @@ import coloração
 #     for n in range(iterations):
 #         pass
 
-def vertex_to_color(neighbors, color):
+def has_no_neighbors_in_color(neighbors, color):
     for n in neighbors:
         for vertex in color:
             if(n==vertex):
@@ -34,7 +34,7 @@ def find_solution(graph):
 
         colored=False
         for color in colors.keys():
-            if( vertex_to_color(graph[i], colors[color]) ):
+            if( has_no_neighbors_in_color(graph[i], colors[color]) ):
                 colors[color].append(i)
                 colored=True
         if(colored==False):
@@ -42,7 +42,22 @@ def find_solution(graph):
             colors[colors_size] = [i]
 
     print(colors)
+    print(is_solution_valid(graph, colors))
+
     return colors
+
+def is_solution_valid(graph, colors):
+    for color in colors:
+
+        color_set = set(colors[color])
+
+        for vertex in colors[color]:
+            neighbor_set = set(graph[vertex])
+
+            if(neighbor_set & color_set):
+                return False
+    return True
+
 
 
 def main():
