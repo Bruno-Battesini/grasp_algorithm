@@ -24,4 +24,9 @@ for line in text:
         temp.remove('e')
         v0 = int(temp[0])
         v1 = int(temp[1])
-        graph[v0] = v1
+        if v0 in graph:
+            graph[v0].append(v1)
+        else:
+            graph[v0] = [v1]
+
+# print(graph)    
