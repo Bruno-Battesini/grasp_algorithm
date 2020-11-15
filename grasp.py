@@ -1,6 +1,6 @@
 import random
 import coloração
-
+import math
 
 # def random_generator(seed, lower_bound, higher_bound):
 #     random.seed(seed)
@@ -22,11 +22,20 @@ def sort_by_degree(x):
     sorted_graph = {k: v for k, v in sorted(x.items(), key=lambda item: item[1])}
     return sorted_graph.keys()
 
+def random_swap(e_list):
+    idx = range(len(e_list))
+    i1,i2 = random.sample(idx,2)
+    e_list[i1], e_list[i2] = e_list[i2], e_list[i1]
+
 def find_solution(graph):
     #sort graph by value length
-    sorted_by_degree = sort_by_degree(graph)
+    sorted_by_degree = list(sort_by_degree(graph))
 
-    #generate perturbation
+
+    #generate perturbation in 10% of the elements
+    perturbate_times = math.floor(len(sorted_by_degree)*0.1)
+    for i in range(perturbate_times):
+        random_swap(sorted_by_degree)
 
     colors = {}
 
@@ -41,8 +50,8 @@ def find_solution(graph):
             colors_size = len(colors)
             colors[colors_size] = [i]
 
-    print(colors)
-    print(is_solution_valid(graph, colors))
+    # print(colors)
+    # print(is_solution_valid(graph, colors))
 
     return colors
 
