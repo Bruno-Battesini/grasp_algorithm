@@ -1,8 +1,8 @@
 
 def get_graph():
-    # print("Digite o nome do arquivo")
-    # fileName = input()
-    fileName = "queen6_6.col"
+    print("Digite o nome do arquivo")
+    fileName = input()
+    # fileName = "queen6_6.col"
 
     file = open(fileName,'r')
 
