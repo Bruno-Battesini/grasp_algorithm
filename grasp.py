@@ -174,11 +174,20 @@ def grasp(graph):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', '-i', required=False, nargs='*')
+    parser.add_argument('--seed', '-s', required=False, nargs='*')
     args = parser.parse_args()
 
     file_input = ""
+    seed = 0
+
     if(args.input):
         file_input = args.input[0]
+    if(args.seed):
+        seed = int(args.seed[0])
+
+    print("teste")
+    print(seed)
+    random.seed(seed)
 
     graph = coloração.get_graph(file_input)
 
