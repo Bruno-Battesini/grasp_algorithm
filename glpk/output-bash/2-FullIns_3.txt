@@ -1,0 +1,69 @@
+Reading model section from coloring.mod...
+coloring.mod:17: warning: unexpected end of file; missing end statement inserted
+17 lines were read
+Reading data section from 2-FullIns_3.dat...
+7 lines were read
+Generating obj...
+Generating R1...
+Generating R2...
+Model has been successfully generated
+ipp_basic_tech:  1 row(s) and 0 column(s) removed
+ipp_reduce_bnds: 1 pass(es) made, 0 bound(s) reduced
+ipp_basic_tech:  0 row(s) and 0 column(s) removed
+ipp_reduce_coef: 1 pass(es) made, 0 coefficient(s) reduced
+glp_intopt: presolved MIP has 10504 rows, 2756 columns, 34060 non-zeros
+glp_intopt: 2756 integer columns, all of which are binary
+Scaling...
+ A: min|aij| = 1.000e+000  max|aij| = 1.000e+000  ratio = 1.000e+000
+Problem data seem to be well scaled
+Crashing...
+Size of triangular part = 10504
+Solving LP relaxation...
+      0: obj =  0.000000000e+000  infeas = 4.020e+002 (0)
+    200: obj =  3.000000000e+000  infeas = 1.150e+002 (0)
+    400: obj =  3.000000000e+000  infeas = 6.500e+001 (0)
+    600: obj =  3.000000000e+000  infeas = 1.450e+001 (0)
+    800: obj =  3.000000000e+000  infeas = 1.000e+000 (0)
+*   947: obj =  3.000000000e+000  infeas = 0.000e+000 (0)
+*  1000: obj =  3.000000000e+000  infeas = 0.000e+000 (0)
+*  1200: obj =  2.000000000e+000  infeas = 0.000e+000 (0)
+*  1400: obj =  2.000000000e+000  infeas = 1.776e-015 (0)
+*  1600: obj =  2.000000000e+000  infeas = 0.000e+000 (0)
+*  1800: obj =  2.000000000e+000  infeas = 7.578e-016 (0)
+*  2000: obj =  2.000000000e+000  infeas = 2.895e-014 (0)
+*  2200: obj =  2.000000000e+000  infeas = 4.045e-014 (0)
+*  2400: obj =  2.000000000e+000  infeas = 3.043e-014 (0)
+*  2600: obj =  2.000000000e+000  infeas = 7.171e-014 (0)
+*  2800: obj =  2.000000000e+000  infeas = 1.335e-013 (0)
+*  3000: obj =  2.000000000e+000  infeas = 5.328e-014 (0)
+*  3200: obj =  2.000000000e+000  infeas = 1.178e-013 (0)
+*  3400: obj =  2.000000000e+000  infeas = 2.607e-013 (0)
+*  3600: obj =  2.000000000e+000  infeas = 1.401e-013 (0)
+*  3800: obj =  2.000000000e+000  infeas = 1.832e-013 (0)
+*  3946: obj =  2.000000000e+000  infeas = 1.957e-013 (0)
+OPTIMAL SOLUTION FOUND
+Integer optimization begins...
++  3946: mip =     not found yet >=              -inf        (1; 0)
++  7385: mip =     not found yet >=  2.000985293e+000        (55; 0)
++ 14596: mip =     not found yet >=  2.000985293e+000        (57; 0)
++ 21369: mip =     not found yet >=  2.000985293e+000        (79; 0)
++ 22731: >>>>>  5.000000000e+000 >=  2.000985293e+000  60.0% (81; 0)
++ 29433: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (81; 5)
++ 34164: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (101; 6)
++ 39298: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (107; 6)
++ 44719: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (115; 7)
++ 53293: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (136; 8)
++ 59276: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (163; 9)
++ 65140: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (174; 9)
++ 70312: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (185; 10)
+Time used: 60.0 secs.  Memory used: 16.4 Mb.
++ 78273: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (206; 11)
++ 84739: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (218; 12)
++ 89056: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (222; 12)
++ 94247: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (234; 13)
++101116: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (248; 14)
++101116: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (248; 14)
+TIME LIMIT EXCEEDED; SEARCH TERMINATED
+Time used:   91.8 secs
+Memory used: 19.6 Mb (20528184 bytes)
+lpx_print_mip: writing MIP problem solution to `.\output\2-FullIns_3.out'...

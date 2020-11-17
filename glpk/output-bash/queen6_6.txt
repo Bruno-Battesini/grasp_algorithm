@@ -1,0 +1,60 @@
+Reading model section from coloring.mod...
+coloring.mod:17: warning: unexpected end of file; missing end statement inserted
+17 lines were read
+Reading data section from queen6_6.dat...
+7 lines were read
+Generating obj...
+Generating R1...
+Generating R2...
+Model has been successfully generated
+ipp_basic_tech:  1 row(s) and 0 column(s) removed
+ipp_reduce_bnds: 1 pass(es) made, 0 bound(s) reduced
+ipp_basic_tech:  0 row(s) and 0 column(s) removed
+ipp_reduce_coef: 1 pass(es) made, 0 coefficient(s) reduced
+glp_intopt: presolved MIP has 20916 rows, 1332 columns, 63936 non-zeros
+glp_intopt: 1332 integer columns, all of which are binary
+Scaling...
+ A: min|aij| = 1.000e+000  max|aij| = 1.000e+000  ratio = 1.000e+000
+Problem data seem to be well scaled
+Crashing...
+Size of triangular part = 20916
+Solving LP relaxation...
+      0: obj =  0.000000000e+000  infeas = 1.160e+003 (0)
+    200: obj =  2.000000000e+000  infeas = 2.720e+002 (0)
+    400: obj =  2.500000000e+000  infeas = 2.035e+002 (0)
+    600: obj =  3.000000000e+000  infeas = 2.700e+001 (0)
+    800: obj =  3.000000000e+000  infeas = 1.400e+001 (0)
+*   922: obj =  3.000000000e+000  infeas = 0.000e+000 (0)
+*  1000: obj =  2.000000000e+000  infeas = 0.000e+000 (0)
+*  1200: obj =  2.000000000e+000  infeas = 5.037e-014 (0)
+*  1400: obj =  2.000000000e+000  infeas = 4.567e-014 (0)
+*  1600: obj =  2.000000000e+000  infeas = 0.000e+000 (0)
+*  1800: obj =  2.000000000e+000  infeas = 1.090e-013 (0)
+*  2000: obj =  2.000000000e+000  infeas = 9.757e-016 (0)
+*  2200: obj =  2.000000000e+000  infeas = 1.563e-013 (0)
+*  2379: obj =  2.000000000e+000  infeas = 2.699e-013 (0)
+OPTIMAL SOLUTION FOUND
+Integer optimization begins...
++  2379: mip =     not found yet >=              -inf        (1; 0)
++  4268: mip =     not found yet >=  3.000000000e+000        (37; 0)
++  8771: mip =     not found yet >=  3.000000000e+000        (39; 0)
++ 11698: mip =     not found yet >=  3.000000000e+000        (44; 0)
++ 15508: mip =     not found yet >=  3.000000000e+000        (55; 0)
++ 16550: >>>>>  8.000000000e+000 >=  3.000000000e+000  62.5% (60; 0)
++ 21042: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (54; 15)
++ 23816: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (58; 15)
++ 29786: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (68; 16)
++ 33528: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (77; 16)
++ 37194: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (81; 17)
++ 40039: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (86; 17)
+Time used: 60.5 secs.  Memory used: 27.1 Mb.
++ 44930: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (92; 18)
++ 48948: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (101; 18)
++ 53342: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (107; 19)
++ 56319: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (113; 19)
++ 61372: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (120; 20)
++ 61372: mip =  8.000000000e+000 >=  3.000000000e+000  62.5% (120; 20)
+TIME LIMIT EXCEEDED; SEARCH TERMINATED
+Time used:   95.6 secs
+Memory used: 32.0 Mb (33558204 bytes)
+lpx_print_mip: writing MIP problem solution to `.\output\queen6_6.out'...

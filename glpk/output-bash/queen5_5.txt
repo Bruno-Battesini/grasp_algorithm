@@ -1,0 +1,56 @@
+Reading model section from coloring.mod...
+coloring.mod:17: warning: unexpected end of file; missing end statement inserted
+17 lines were read
+Reading data section from queen5_5.dat...
+7 lines were read
+Generating obj...
+Generating R1...
+Generating R2...
+Model has been successfully generated
+ipp_basic_tech:  1 row(s) and 0 column(s) removed
+ipp_reduce_bnds: 1 pass(es) made, 0 bound(s) reduced
+ipp_basic_tech:  0 row(s) and 0 column(s) removed
+ipp_reduce_coef: 1 pass(es) made, 0 coefficient(s) reduced
+glp_intopt: presolved MIP has 8025 rows, 650 columns, 24625 non-zeros
+glp_intopt: 650 integer columns, all of which are binary
+Scaling...
+ A: min|aij| = 1.000e+000  max|aij| = 1.000e+000  ratio = 1.000e+000
+Problem data seem to be well scaled
+Crashing...
+Size of triangular part = 8025
+Solving LP relaxation...
+      0: obj =  0.000000000e+000  infeas = 6.400e+002 (0)
+    200: obj =  3.000000000e+000  infeas = 1.290e+002 (0)
+*   264: obj =  3.000000000e+000  infeas = 0.000e+000 (0)
+*   400: obj =  2.000000000e+000  infeas = 0.000e+000 (0)
+*   600: obj =  2.000000000e+000  infeas = 0.000e+000 (0)
+*   800: obj =  2.000000000e+000  infeas = 3.069e-014 (0)
+*  1000: obj =  2.000000000e+000  infeas = 5.095e-014 (0)
+*  1019: obj =  2.000000000e+000  infeas = 5.073e-014 (0)
+OPTIMAL SOLUTION FOUND
+Integer optimization begins...
++  1019: mip =     not found yet >=              -inf        (1; 0)
++  3817: >>>>>  5.000000000e+000 >=  3.000000000e+000  40.0% (32; 0)
++ 11094: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (48; 9)
++ 20735: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (54; 17)
++ 29465: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (63; 26)
++ 38184: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (80; 32)
++ 46863: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (96; 41)
++ 54510: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (134; 48)
++ 62639: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (148; 57)
++ 71289: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (170; 64)
++ 80584: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (178; 70)
++ 89843: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (189; 77)
++ 98642: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (206; 84)
+Time used: 60.0 secs.  Memory used: 12.4 Mb.
++106484: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (228; 91)
++115443: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (246; 98)
++124340: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (264; 105)
++133556: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (278; 112)
++143001: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (290; 117)
++151753: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (310; 126)
++151753: mip =  5.000000000e+000 >=  3.000000000e+000  40.0% (310; 126)
+TIME LIMIT EXCEEDED; SEARCH TERMINATED
+Time used:   90.4 secs
+Memory used: 15.1 Mb (15798499 bytes)
+lpx_print_mip: writing MIP problem solution to `.\output\queen5_5.out'...
