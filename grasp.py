@@ -185,8 +185,7 @@ def main():
     if(args.seed):
         seed = int(args.seed[0])
 
-    print("teste")
-    print(seed)
+    print("seed = " + str(seed))
     random.seed(seed)
 
     graph = coloração.get_graph(file_input)
