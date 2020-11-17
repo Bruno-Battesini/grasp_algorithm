@@ -2,15 +2,14 @@ import random
 import coloração
 import math
 import copy
+import time
 
-# def random_generator(seed, lower_bound, higher_bound):
-#     random.seed(seed)
-#     return random.randint(lower_bound, higher_bound)
+p1=0.25 #initial solution perturbation
+p2=0.25 #neighbor generation perturbation
+f1=100  #grasp max iterations
+f2=50  #hc max iterations
+f3=25   #neighborhood size
 
-
-# def grasp(alpha, iterations):
-#     for n in range(iterations):
-#         pass
 
 def has_no_neighbors_in_color(neighbors, color):
     for n in neighbors:
@@ -33,7 +32,7 @@ def find_solution(graph):
     sorted_by_degree = list(sort_by_degree(graph))
 
     #generate perturbation in 10% of the element
-    perturbate_times = math.floor(len(sorted_by_degree)*0.3)
+    perturbate_times = math.floor(len(sorted_by_degree)*p1)
     for i in range(perturbate_times):
         random_swap(sorted_by_degree)
 
@@ -86,7 +85,7 @@ def clear_dict(colors):
 def generate_new_solution(graph, colors):
     n_vertex = len(graph.keys())
     
-    randomize_n = math.floor(n_vertex*0.15)
+    randomize_n = math.floor(n_vertex*p2)
 
     random_vertexes = []
 
@@ -130,9 +129,9 @@ def hill_climbing(graph, colors):
     current_solution = copy.deepcopy(colors)
     j=0
 
-    while(not improved_solution(colors, current_solution) and j<100):
+    while(not improved_solution(colors, current_solution) and j<f2):
 
-        neighborhood_size = 15
+        neighborhood_size = f3
         for i in range(0,neighborhood_size):
 
             copy_current_solution = copy.deepcopy(current_solution)
@@ -153,7 +152,7 @@ def grasp(graph):
 
     current_solution = {}
 
-    for loop in range(0,100):
+    for loop in range(0,f1):
 
         colors = find_solution(graph)
 
@@ -172,12 +171,15 @@ def grasp(graph):
     return current_solution
 
 def main():
+    start_time = time.time()
+
     graph = coloração.get_graph()
 
     colors = grasp(graph)
 
     print(colors)
     print(is_solution_valid(graph, colors))
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 if __name__ == "__main__":
     main()
