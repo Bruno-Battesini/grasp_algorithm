@@ -3,6 +3,7 @@ import coloração
 import math
 import copy
 import time
+import argparse
 
 p1=0.25 #initial solution perturbation
 p2=0.25 #neighbor generation perturbation
@@ -171,10 +172,17 @@ def grasp(graph):
     return current_solution
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--input', '-i', required=False, nargs='*')
+    args = parser.parse_args()
+
+    file_input = ""
+    if(args.input):
+        file_input = args.input[0]
+
+    graph = coloração.get_graph(file_input)
+
     start_time = time.time()
-
-    graph = coloração.get_graph()
-
     colors = grasp(graph)
 
     print(colors)
