@@ -1,9 +1,12 @@
 
-def get_graph():
-    print("Digite o nome do arquivo")
-    fileName = input()
+def get_graph(filename):
+    
 
-    file = open(fileName,'r')
+    if(filename==""):
+        print("Digite o nome do arquivo")
+        filename = input()
+
+    file = open(filename,'r')
 
     text = file.readlines()
 
